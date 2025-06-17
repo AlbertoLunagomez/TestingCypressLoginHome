@@ -13,3 +13,17 @@ describe('Login Test Suite', () => {
     cy.url();
   });
 });
+
+describe('Invalid Login Test Suite', () => {
+  beforeEach(() => {
+    cy.fixture('users').as('user');
+  });
+
+  it('Should not log in with invalid credentials', function () {
+    loginPage.visit();
+    loginPage.fillUsername(this.user.invalid.username);
+    loginPage.fillPassword(this.user.invalid.password);
+    loginPage.submit();
+    cy.url();
+  });
+});
