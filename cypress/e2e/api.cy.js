@@ -16,4 +16,14 @@ describe('REST API TEST WITH CYPRESS', function() {
         cy.get('@pokemon').its('body')
             .should('include', {name:'nidorino'})
     })
+
+    it('API Test-404 Status Validation', function(){
+        cy.request({
+            method: 'GET',
+            url: 'https://pokeapi.co/api/v2/pokemon/999999/',
+            failOnStatusCode: false,
+        }).as('pokemon')
+        cy.get('@pokemon').its('status')
+        .should('equal', 404)
+    })
 })
