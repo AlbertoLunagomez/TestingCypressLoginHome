@@ -3,7 +3,7 @@ class HomePage {
     this.calculatorButton = '#goToCalculator';
   }
   validateWelcomeMessage() {
-    cy.contains('You are logged in!').should('be.visible');
+    cy.contains('Welcome to Calculator Online!').should('be.visible');
   }
   navigateToCalculator() {
     cy.get(this.calculatorButton).click(); // Adjust to your navigation logic
