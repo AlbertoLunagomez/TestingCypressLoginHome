@@ -2,5 +2,9 @@
   "valid": {
     "username": "testuser",
     "password": "password123"
+  },
+  "invalid": {
+    "username": "testuserfail",
+    "password": "passwordFail"
   }
 }
