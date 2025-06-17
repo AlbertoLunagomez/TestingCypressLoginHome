@@ -12,12 +12,6 @@ describe('Login Test Suite', () => {
     loginPage.submit();
     cy.url();
   });
-});
-
-describe('Invalid Login Test Suite', () => {
-  beforeEach(() => {
-    cy.fixture('users').as('user');
-  });
 
   it('Should not log in with invalid credentials', function () {
     loginPage.visit();
