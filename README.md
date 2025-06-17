@@ -3,9 +3,10 @@
 ## 🔧 Setup
 
 1. Clona este proyecto junto con la app Node.js
-2. Asegúrate de que la app esté corriendo en `http://localhost:3000`
+2. Asegúrate de que la app esté corriendo en `http://localhost:3000` e instalar dotenv
 ```bash
 npm install
+npm install dotenv
 node app.js
 ```
 
