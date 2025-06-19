@@ -4,7 +4,7 @@ describe('REST API TEST WITH CYPRESS', function() {
 
     beforeEach(() => {
         cy.fixture('pokemons').as('pokemon');
-        baseUrl = Cypress.env('api_base_url');
+        baseUrl = 'https://pokeapi.co/api/v2';
         cy.get('@pokemon').then((pokemon) => {
             pokemonId = pokemon.valid.pokemonId;
 
